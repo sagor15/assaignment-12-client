@@ -2,10 +2,10 @@ import React from 'react';
 
 const Bussness = () => {
     return (
-        <section>
+        <section className='py-10'>
             <h1 className='text-3xl text-center text-primary py-5 mt-10'>BUSINESS TRUST US</h1>
             <p className='text-xl text-center text-secondary font-bold py-10'>We Are try to Understand User Stisfection</p>
-        <div class="stats w-full h-48 drop-shadow-2xl ">
+        <div class="stats w-full h-56	 drop-shadow-2xl ">
   
         <div class="stat">
           <div class="stat-figure text-primary">

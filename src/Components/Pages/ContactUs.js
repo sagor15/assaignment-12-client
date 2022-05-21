@@ -4,8 +4,8 @@ import appointment from "../../asset/background1.jpg"
 const ContactUs = () => {
     return (
         <section  style={{background:`url(${appointment})`,backgroundSize:'cover', backgroundRepeat: 'no-reapet', backgroundAttachment:'fixed'}} className=' mt-[150px] h-auto brightness-50 '>
-            <h1 className='text-white text-center font-bold text-3xl'>contact us</h1>
-            <h1 className='text-center py-5 text-3xl font-light text-white'>Stay connected with us</h1>
+            <h1 className='text-light text-center font-bold text-3xl'>contact us</h1>
+            <h1 className='text-center brightness-100 py-5 text-3xl font-light text-white'>Stay connected with us</h1>
         <div className='py-20 text-center'>
             <input type="text" placeholder="Email Address" className="input input-bordered input-accent w-full max-w-xs" />
             <br/><br/>
