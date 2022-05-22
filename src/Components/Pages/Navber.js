@@ -5,12 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const Navber = () => {
-    // const menuItems =<>
-    //     <li><Link to='/' >Home</Link></li>
-    //     <li><Link to='/tools'>Tools</Link ></li>
-    //     {/* <li><a>Review</a></li> */}
-        
-    //     </>
+   
     return (
         
         <>
@@ -21,6 +16,10 @@ const Navber = () => {
     <Navbar.Collapse className='text-light' id="basic-navbar-nav">
       <Nav className="me-auto ">
         <Nav.Link className='text-light' href="/tools">Tools</Nav.Link>
+        <Nav.Link className='text-light' href="/blog">Blogs</Nav.Link>
+        {/* <Nav.Link className='text-light'id='#bussness'>Bussness</Nav.Link>
+        <Nav.Link className='text-light' id='#makeauto' href="/makeauto">Make Auto</Nav.Link> */}
+        {/* <Nav.Link className='text-light' href="/blog">Blogs</Nav.Link> */}
         
        
       </Nav>
