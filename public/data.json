@@ -1,50 +1,56 @@
 [
-    {
-        "name": "E-RIKSHA-MOTOR",
-        "price": 4500,
-        "description":"eloctronic riksha very important parts is motor ",
-        "img":"https://i.ibb.co/Wtr5ZRM/motor.png",
-        "minimumQuantity":100,
-        "availableProduct":2000
-      },
-    {
-        "name": "E-RIKSHA-PATI",
-        "price": 2900,
-        "description":"eloctronic riksha very important parts is fafa pati ",
-        "img":"https://i.ibb.co/vhcXCqN/pati.png",
-        "minimumQuantity":60,
-        "availableProduct":200
-      },
-    {
-        "name": "E-RIKSHA-GEARBOX",
-        "price": 3300,
-        "description":"eloctronic riksha very important parts is gearbox ",
-        "img":"https://i.ibb.co/XpNC8sR/gearbox.png",
-        "minimumQuantity":100,
-        "availableProduct":2000
-      },
-    {
-        "name": "E-RIKSHA-CONTRORAL",
-        "price": 2700,
-        "description":"eloctronic riksha very important parts is controral ",
-        "img":"https://i.ibb.co/QfMQcQ3/controral.png",
-        "minimumQuantity":100,
-        "availableProduct":2000
-      },
-    {
-        "name": "E-RIKSHA-DIVENCER",
-        "price": 12000,
-        "description":"eloctronic riksha very important parts is divencer ",
-        "img":"https://i.ibb.co/HGLnYkr/Background.png",
-        "minimumQuantity":20,
-        "availableProduct":40
-      },
-    {
-        "name": "E-RIKSHA-CHOSMA",
-        "price": 1200,
-        "description":"eloctronic riksha very important parts is chosma ",
-        "img":"https://i.ibb.co/tmsRmb0/chosma.png",
-        "minimumQuantity":50,
-        "availableProduct":1000
-      }
+  {
+    "id": 1,
+    "name": "E-RIKSHA-MOTOR",
+    "price": 4500,
+    "description": "eloctronic riksha very important parts is motor ",
+    "img": "https://i.ibb.co/Wtr5ZRM/motor.png",
+    "minimumQuantity": 100,
+    "availableProduct": 2000
+  },
+  {
+    "id": 2,
+    "name": "E-RIKSHA-PATI",
+    "price": 2900,
+    "description": "eloctronic riksha very important parts is fafa pati ",
+    "img": "https://i.ibb.co/vhcXCqN/pati.png",
+    "minimumQuantity": 60,
+    "availableProduct": 200
+  },
+  {
+    "id": 3,
+    "name": "E-RIKSHA-GEARBOX",
+    "price": 3300,
+    "description": "eloctronic riksha very important parts is gearbox ",
+    "img": "https://i.ibb.co/XpNC8sR/gearbox.png",
+    "minimumQuantity": 100,
+    "availableProduct": 2000
+  },
+  {
+    "id": 4,
+    "name": "E-RIKSHA-CONTRORAL",
+    "price": 2700,
+    "description": "eloctronic riksha very important parts is controral ",
+    "img": "https://i.ibb.co/QfMQcQ3/controral.png",
+    "minimumQuantity": 100,
+    "availableProduct": 2000
+  },
+  {
+    "id": 5,
+    "name": "E-RIKSHA-DIVENCER",
+    "price": 12000,
+    "description": "eloctronic riksha very important parts is divencer ",
+    "img": "https://i.ibb.co/HGLnYkr/Background.png",
+    "minimumQuantity": 20,
+    "availableProduct": 40
+  },
+  {
+    "id": 6,
+    "name": "E-RIKSHA-CHOSMA",
+    "price": 1200,
+    "description": "eloctronic riksha very important parts is chosma ",
+    "img": "https://i.ibb.co/tmsRmb0/chosma.png",
+    "minimumQuantity": 50,
+    "availableProduct": 1000
+  }
 ]

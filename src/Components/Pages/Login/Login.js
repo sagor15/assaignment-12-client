@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import pic from "../../../asset/bg1.jpg"
 import auth from '../../../firebase.init';
+import Loading from "../../Shared/Loading"
 
 const Login = () => {
     const [signInWithGoogle, guser, gloading, gerror] = useSignInWithGoogle(auth);
@@ -26,6 +27,19 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
+
+
+    if(loading || gloading){
+        return <Loading></Loading>
+    }
+
+    if(error || gerror){
+        SignInError = <p>{gerror?.message || error?.message}</p>
+    }
+
+    if(user || guser){
+        navigate(from, {replace:true});
+    }
     // const [token] =useToken(user || guser);
     // useEffect(()=>{
     //     if(token){
@@ -50,8 +64,8 @@ const Login = () => {
                         <h1 className='text-black text-4xl text-center py-5'>Login Form</h1>
                         <div className="card-body text-black">
 
-                        {/* onSubmit={handleSubmit(onSubmit)} */}
-                            <form >
+                        {/*  */}
+                            <form onSubmit={handleSubmit(onSubmit)} >
                                
 
                             <div className="form-control w-full max-w-xs">
@@ -111,7 +125,7 @@ const Login = () => {
                                 
                             </div>
 
-                                  {/* <span className='text-red-500'>{SignInError}</span> */}
+                                  <span className='text-red-500'>{SignInError}</span>
                             <input className='btn btn-secondary w-full max-w-xs' type="submit" value='Login' />
                             </form>
 

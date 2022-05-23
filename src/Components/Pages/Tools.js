@@ -3,7 +3,9 @@ import ToolsCard from './ToolsCard';
 
 const Tools = () => {
     const [products,setProducts] = useState();
+
     useEffect(()=>{
+        // const url = `http://localhost:5000/product`
         fetch('data.json')
         .then(res=>res.json()).then(data=>{
             setProducts(data);

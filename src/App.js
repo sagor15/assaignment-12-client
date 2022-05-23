@@ -7,6 +7,8 @@ import Navber from './Components/Pages/Navber';
 import Tools from './Components/Pages/Tools';
 import Login from "./Components/Pages/Login/Login";
 import SignUp from './Components/Pages/Login/SignUp';
+import ByuDetails from './Components/Pages/ByuDetails';
+import RequireAuth from './Components/Pages/Login/RequireAuth';
 
 
 function App() {
@@ -16,7 +18,16 @@ function App() {
       
      <Routes>
        <Route path='/' element={<Home></Home>}></Route>
-       <Route path='/tools' element={<Tools></Tools>}></Route>
+       <Route path='/tools' element={
+       <RequireAuth>
+       <Tools></Tools>
+       </RequireAuth>
+       }></Route>
+       <Route path='/tools/:Id' element={
+         <RequireAuth>
+           <ByuDetails></ByuDetails>
+         </RequireAuth>
+       }></Route>
        <Route path='/blog' element={<Blog></Blog>}></Route>
        <Route path='/login' element={<Login></Login>}></Route>
        <Route path='/signup' element={<SignUp></SignUp>}></Route>
