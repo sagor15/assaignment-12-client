@@ -9,6 +9,7 @@ import Login from "./Components/Pages/Login/Login";
 import SignUp from './Components/Pages/Login/SignUp';
 import ByuDetails from './Components/Pages/ByuDetails';
 import RequireAuth from './Components/Pages/Login/RequireAuth';
+import Dashboard from './Components/Pages/Dashboard/Dashboard';
 
 
 function App() {
@@ -26,6 +27,11 @@ function App() {
        <Route path='/tools/:Id' element={
          <RequireAuth>
            <ByuDetails></ByuDetails>
+         </RequireAuth>
+       }></Route>
+       <Route path='/dashboard' element={
+         <RequireAuth>
+           <Dashboard></Dashboard>
          </RequireAuth>
        }></Route>
        <Route path='/blog' element={<Blog></Blog>}></Route>

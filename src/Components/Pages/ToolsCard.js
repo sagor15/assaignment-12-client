@@ -1,8 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const ToolsCard = ({ product }) => {
-    const {id, name, price, description, img, minimumQuantity, availableProduct } = product;
+const ToolsCard = ({ product,setDetails }) => {
+    const {_id, name, price, description, img, minimumQuantity, availableProduct } = product;
     const navigate = useNavigate();
     // 
     const navigateToBuyDetails = id =>{
@@ -21,7 +21,7 @@ const ToolsCard = ({ product }) => {
                    <span>available Product: {minimumQuantity}ps</span>
                </div>
                 <div class="card-actions justify-end">
-                    <button onClick={()=> navigateToBuyDetails(id)} class="btn btn-primary transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:btn-indigo duration-300 ">Buy Now</button>
+                    <button onClick={()=> navigateToBuyDetails(_id)} class="btn btn-primary transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:btn-indigo duration-300 ">Buy Now</button>
                 </div>
             </div>
         </div>

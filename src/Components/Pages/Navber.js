@@ -40,6 +40,9 @@ const Navber = () => {
     </Navbar.Collapse>
     <Navbar.Collapse className="justify-content-end">
       {
+        user && <Nav.Link className='text-light' as={Link} to="/dashboard">Dashboard</Nav.Link>
+      }
+      {
         user ? <Nav.Link className='text-light transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:btn-indigo duration-300' onClick={logout} ><span className='text-primary '>Sign Out</span></Nav.Link>:<Nav.Link className='text-light' as={Link} to="/login">Login</Nav.Link>
       }
     </Navbar.Collapse>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading';
 import pic from "../../../asset/bg1.jpg"
@@ -14,6 +14,8 @@ const SignUp = () => {
     const [updateProfile, updating, UpdateError] = useUpdateProfile(auth);
     const [signInWithGoogle, guser, gloading, gerror] = useSignInWithGoogle(auth);
     const navigate = useNavigate();
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
     const [
       createUserWithEmailAndPassword,
       user,
@@ -38,8 +40,8 @@ const SignUp = () => {
     if (gerror || error || UpdateError) {
       SignInError = <p>{gerror?.message || error?.message || UpdateError.message}</p>
     }
-    if (guser || user) {
-      navigate('/');
+    if (user || guser) {
+        navigate(from, {replace:true});
       
     }
 

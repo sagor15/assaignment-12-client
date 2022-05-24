@@ -1,0 +1,15 @@
+
+.dashbord{
+    visibility: hidden;
+}
+.sagor{
+    background-color: #f2f9fd;
+    color: #09a4f2;
+}
+
+@media screen and (max-width:600px) {
+    .dashbord{
+        visibility: inherit;
+    }
+    
+}

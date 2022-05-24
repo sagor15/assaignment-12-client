@@ -3,10 +3,11 @@ import ToolsCard from './ToolsCard';
 
 const Tools = () => {
     const [products,setProducts] = useState();
+    // const [details , setDetails] = useState({});
 
     useEffect(()=>{
-        // const url = `http://localhost:5000/product`
-        fetch('data.json')
+        const url = `http://localhost:5000/product`
+        fetch(url)
         .then(res=>res.json()).then(data=>{
             setProducts(data);
         })
@@ -17,6 +18,7 @@ const Tools = () => {
                products?.map(product=> <ToolsCard
                key={product.id}
                product={product}
+            //    setDetails={setDetails}
                ></ToolsCard>)
            }
        </div>
