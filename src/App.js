@@ -10,6 +10,8 @@ import SignUp from './Components/Pages/Login/SignUp';
 import ByuDetails from './Components/Pages/ByuDetails';
 import RequireAuth from './Components/Pages/Login/RequireAuth';
 import Dashboard from './Components/Pages/Dashboard/Dashboard';
+import MyOrder from './Components/Pages/Dashboard/MyOrder';
+import AddReview from './Components/Pages/Dashboard/AddReview';
 
 
 function App() {
@@ -33,7 +35,10 @@ function App() {
          <RequireAuth>
            <Dashboard></Dashboard>
          </RequireAuth>
-       }></Route>
+       }>
+         <Route index element={<MyOrder></MyOrder>}></Route>
+         <Route path='addreview' element={<AddReview></AddReview>}></Route>
+       </Route>
        <Route path='/blog' element={<Blog></Blog>}></Route>
        <Route path='/login' element={<Login></Login>}></Route>
        <Route path='/signup' element={<SignUp></SignUp>}></Route>
