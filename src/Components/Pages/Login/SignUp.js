@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading';
 import pic from "../../../asset/bg1.jpg"
+import UseToken from '../../../hooks/UseToken';
 
 const SignUp = () => {
 
@@ -29,7 +30,7 @@ const SignUp = () => {
       // alert('update profile');
       
   };
-  
+//   const [token] = UseToken(guser || user)
 //   const [token] = useToken(guser || user)
   
     let SignInError;
@@ -40,7 +41,7 @@ const SignUp = () => {
     if (gerror || error || UpdateError) {
       SignInError = <p>{gerror?.message || error?.message || UpdateError.message}</p>
     }
-    if (user || guser) {
+    if (guser || user) {
         navigate(from, {replace:true});
       
     }

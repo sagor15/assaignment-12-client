@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import pic from "../../../asset/bg1.jpg"
 import auth from '../../../firebase.init';
 import Loading from "../../Shared/Loading"
+import UseToken from '../../../hooks/UseToken';
 
 const Login = () => {
     const [signInWithGoogle, guser, gloading, gerror] = useSignInWithGoogle(auth);
@@ -17,6 +18,7 @@ const Login = () => {
         loading,
         error,
       ] = useSignInWithEmailAndPassword(auth);
+    //   const [token] = UseToken(guser || user)
 
     const onSubmit = data => {
         signInWithEmailAndPassword(data.email , data.password);
@@ -37,7 +39,7 @@ const Login = () => {
         SignInError = <p>{gerror?.message || error?.message}</p>
     }
 
-    if(user || guser){
+    if(guser || user){
         navigate(from, {replace:true});
     }
     // const [token] =useToken(user || guser);

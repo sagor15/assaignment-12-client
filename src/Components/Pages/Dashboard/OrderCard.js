@@ -26,6 +26,10 @@ const OrderCard = ({orde}) => {
         <td>{order}ps</td>
         <th>
           <button class="btn btn-primary btn-sx">Delete</button>
+          
+        </th>
+        <th>
+        <button class="btn btn-secondary btn-sx ">Pay</button>
         </th>
       </tr>
     );
