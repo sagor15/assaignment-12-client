@@ -64,10 +64,21 @@ const Blog = () => {
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="1">
-                    <Accordion.Header></Accordion.Header>
+                    <Accordion.Header>What is a unit test? Why should write unit tests?</Accordion.Header>
                     <Accordion.Body>
                        
+                    Unit testing is a software development process in which the smallest testable 
+                    parts of an application, called units, are individually and independently
+                     scrutinized for proper operation. This testing methodology is done during 
+                     the development process by the software developers and sometimes QA staff. 
+                      The main objective of unit
+                     testing is to isolate written code to test and determine if it works as intended.
 
+                     Unit Testing is importants because software developers sometimes try saving times 
+                     doing minimal unit testing and this is mythd because inappropriate unit testing 
+                     leads to high costs Defect sfixing during System Testing, Integration Testing and 
+                     even Beta Testing after application is built. If proper
+                      unit testing is done in early development, then it saves time and money in the end.
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
