@@ -6,7 +6,7 @@ const Tools = () => {
     // const [details , setDetails] = useState({});
 
     useEffect(()=>{
-        const url = `http://localhost:5000/product`
+        const url = `https://guarded-sea-37024.herokuapp.com/product`
         fetch(url)
         .then(res=>res.json()).then(data=>{
             setProducts(data);

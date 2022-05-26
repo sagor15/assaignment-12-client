@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 const ToolsCard = ({ product,setDetails }) => {
     const {_id, name, price, description, img, minimumQuantity, availableProduct } = product;
     const navigate = useNavigate();
-    // 
+    
     const navigateToBuyDetails = id =>{
         navigate(`/tools/${id}`);
     }

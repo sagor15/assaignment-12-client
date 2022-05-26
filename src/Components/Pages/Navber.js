@@ -39,6 +39,7 @@ const Navber = () => {
       </Nav>
     </Navbar.Collapse>
     <Navbar.Collapse className="justify-content-end">
+    <Nav.Link className='text-light' as={Link} to="/portfolio">Portfolio</Nav.Link>
       {
         user && <Nav.Link className='text-light' as={Link} to="/dashboard">Dashboard</Nav.Link>
       }

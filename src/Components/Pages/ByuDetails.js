@@ -9,7 +9,9 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const ByuDetails = () => {
     const { Id } = useParams();
+    console.log(Id);
     const [services, setServices] = useState({});
+    // console.log(services);
     const { register, handleSubmit } = useForm();
     const onSubmit = data => console.log(data);
     const [user] = useAuthState(auth);
@@ -18,7 +20,7 @@ const ByuDetails = () => {
     const { _id, name, price, description, img, minimumQuantity, availableProduct } = services;
 
     useEffect(() => {
-        const url = `http://localhost:5000/product/${Id}`;
+        const url = `https://guarded-sea-37024.herokuapp.com/product/${Id}`;
         fetch(url)
             .then(res => res.json()).then(data => {
                 setServices(data);
@@ -52,7 +54,7 @@ const ByuDetails = () => {
             phone: e?.target?.phone?.value,
             order:e?.target?.order?.value,
         }
-        fetch('http://localhost:5000/booking',{
+        fetch('https://guarded-sea-37024.herokuapp.com/booking',{
             method:'POST',
             headers:{
                 'content-type':'application/json',

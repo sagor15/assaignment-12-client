@@ -9,7 +9,7 @@ const MyOrder = () => {
 
     useEffect(() => {
         if (user) {
-            const url = `http://localhost:5000/booking?user=${user.email}`
+            const url = `https://guarded-sea-37024.herokuapp.com/booking?user=${user.email}`
             fetch(url)
                 .then(res => res.json())
                 .then(data => {

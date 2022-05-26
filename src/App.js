@@ -14,6 +14,10 @@ import MyOrder from './Components/Pages/Dashboard/MyOrder';
 import AddReview from './Components/Pages/Dashboard/AddReview';
 import AllUsers from './Components/Pages/Dashboard/AllUsers';
 import AdminRequire from './Components/Pages/Login/AdminRequire';
+import Payment from './Components/Pages/Dashboard/Payment';
+import NotFound from './Components/Pages/NotFound/NotFound';
+import Portfolio from './Components/Pages/Portfolio/Portfolio';
+import MyProfile from './Components/Pages/Dashboard/MyProfile';
 
 
 function App() {
@@ -40,12 +44,16 @@ function App() {
        }>
          <Route index element={<MyOrder></MyOrder>}></Route>
          <Route path='addreview' element={<AddReview></AddReview>}></Route>
+         <Route path='payment/:id' element={<Payment></Payment>}></Route>
          <Route path='allusers' element={<AdminRequire><AllUsers></AllUsers></AdminRequire>}></Route>
+         <Route path='myprofile' element={<AdminRequire><MyProfile></MyProfile></AdminRequire>}></Route>
        </Route>
        <Route path='/blog' element={<Blog></Blog>}></Route>
        <Route path='/login' element={<Login></Login>}></Route>
        <Route path='/signup' element={<SignUp></SignUp>}></Route>
+       <Route path='/portfolio' element={<Portfolio></Portfolio>}></Route>
 
+       <Route path='*' element={<NotFound></NotFound>}></Route>
      </Routes>
      
      </div>

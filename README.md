@@ -1,6 +1,6 @@
 
 # Jinuk auto wholsel bd 
-<!-- [Live Site Link](https://mehejabin-project.firebaseapp.com/) -->
+[Live Site Link](https://assaignment-12-21812.web.app/)
 - This project is about bd Electronic Riksha parts mean auto parts of bd.
 - There are home, Blogs and tools and developer own portfolio things in the website.
 - In the home page, there are 6 services and price of our service and also review page here.

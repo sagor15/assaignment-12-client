@@ -1,7 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const OrderCard = ({orde}) => {
-    const {product,image,userName,prices,order} = orde;
+    const {product,image,userName,prices,order,_id} = orde;
+ 
     return (
         <tr>
         
@@ -25,11 +28,13 @@ const OrderCard = ({orde}) => {
         <td>{prices}tk</td>
         <td>{order}ps</td>
         <th>
-          <button class="btn btn-primary btn-sx">Delete</button>
+          <button  class="btn btn-primary btn-sx">Delete</button>
           
         </th>
         <th>
-        <button class="btn btn-secondary btn-sx ">Pay</button>
+        {
+          prices && <Link to={`/dashboard/payment/${_id}`}><button class="btn btn-success btn-sx ">Pay</button></Link>
+        }
         </th>
       </tr>
     );
