@@ -20,7 +20,7 @@ const MyOrder = () => {
 
     return (
         <div>
-            <h1>my order page: {orders.length} </h1>
+            
             <div class="overflow-x-auto w-full">
   <table class="table w-full">
     {/* <!-- head --> */}
