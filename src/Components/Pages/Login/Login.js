@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import pic from "../../../asset/bg1.jpg"
 import auth from '../../../firebase.init';
 import Loading from "../../Shared/Loading"
-import UseToken from '../../../hooks/UseToken';
+
 
 const Login = () => {
     const [signInWithGoogle, guser, gloading, gerror] = useSignInWithGoogle(auth);
